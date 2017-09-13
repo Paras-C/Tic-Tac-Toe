@@ -41,6 +41,11 @@ var winner = "";
         checkWin();
       }  
   });
+
+
+  $("#reset").click(function(event){
+    location.reload();
+  });
 //after each player has made a move, check to see if someone has won
 
 
