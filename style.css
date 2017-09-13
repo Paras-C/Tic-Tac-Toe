@@ -12,3 +12,15 @@
   display: inline-block;
 }
 
+.green{
+}
+
+.blue{
+}
+
+#Winner{
+  text-align: center;
+  font-weight: 200px;
+  font-size: 70px;
+  color: green;
+}
