@@ -20,10 +20,10 @@ var winner = "";
   $(".box").one("click",function(event){
       if(p1==true&&p2==false)
       {
-        $(this).css("background-color","blue");
+        //$(this).css("background-color","blue");
+        $(this).append("<p class='xoro'>X</p>"); 
         p1 = false;
         p2 = true;
-        $(this).addClass("blue");
         var d = $(this).attr("id");
         p1Moves.push(parseInt(d));
         console.log(p1Moves);
@@ -31,10 +31,10 @@ var winner = "";
       }
       else if(p2==true&&p1==false)
       {
-        $(this).css("background-color","green");
+        // $(this).css("background-color","green");
+        $(this).append("<p class='xoro'>O</p>");        
         p1 = true;
         p2 = false;
-        $(this).addClass("green");
         var c = $(this).attr("id");
         p2Moves.push(parseInt(c));
         console.log(p2Moves);

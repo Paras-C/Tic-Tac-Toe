@@ -1,26 +1,34 @@
 #mainGame{
-  width: 600px;
-  height: 600px;
+  width: 690px;
+  height: 690px;
   background: black;
   margin: 0 auto;
 }
 
 .box{
-  height: 197px;
-  width : 197px;
-  background-color: red;
+  height: 225px;
+  width : 225px;
+  background-color: white;
   display: inline-block;
+  vertical-align: top;
+  margin: 1px;
+  margin-bottom: 5px;
 }
 
-.green{
-}
-
-.blue{
-}
 
 #Winner{
   text-align: center;
   font-weight: 200px;
   font-size: 70px;
   color: green;
+  margin-right: 5px;
 }
+
+
+.xoro{
+  font-weight: 700px;
+  text-align: center;
+  font-size: 80px;
+}
+
+
