@@ -1,0 +1,14 @@
+#mainGame{
+  width: 600px;
+  height: 600px;
+  background: black;
+  margin: 0 auto;
+}
+
+.box{
+  height: 197px;
+  width : 197px;
+  background-color: red;
+  display: inline-block;
+}
+
