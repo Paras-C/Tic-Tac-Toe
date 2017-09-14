@@ -1,6 +1,3 @@
-//get a grid on the screen
-
-//when you click on each grid tile, make x and then an o appear
 var p1 = true;
 var p2 = false;
 var winningScenarios = [
@@ -17,28 +14,34 @@ var p1Moves=[];
 var p2Moves=[];
 var win = false;
 var winner = "";
+var moveCounter = 0;
+
+
   $(".box").one("click",function(event){
+      if(moveCounter===9)
+      {
+        $("#Winner").html("It's a Draw");
+      }
+      var d = $(this).attr("id");
       if(p1==true&&p2==false)
       {
-        //$(this).css("background-color","blue");
         $(this).append("<p class='xoro'>X</p>"); 
         p1 = false;
         p2 = true;
-        var d = $(this).attr("id");
         p1Moves.push(parseInt(d));
-        console.log(p1Moves);
         checkWin();
+        moveCounter++;
+        console.log(moveCounter);
       }
       else if(p2==true&&p1==false)
       {
-        // $(this).css("background-color","green");
         $(this).append("<p class='xoro'>O</p>");        
         p1 = true;
         p2 = false;
-        var c = $(this).attr("id");
-        p2Moves.push(parseInt(c));
-        console.log(p2Moves);
+        p2Moves.push(parseInt(d));
         checkWin();
+        moveCounter++;
+        console.log(moveCounter);
       }  
   });
 
@@ -46,8 +49,6 @@ var winner = "";
   $("#reset").click(function(event){
     location.reload();
   });
-//after each player has made a move, check to see if someone has won
-
 
 function checkWin()
 {
@@ -73,10 +74,6 @@ function setWinner(win)
 {
   $("#Winner").html(win + " Wins the Game!");
 }
-
-
-//if winner, display winner message.
-
 
 
 
